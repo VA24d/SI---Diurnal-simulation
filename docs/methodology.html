@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methodology - Diurnal Population Simulation</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+    <header class="hero" style="padding-bottom: 0;">
+        <div class="container">
+            <h1>Methodology</h1>
+            <p>Technical breakdown of the simulation mechanics and Monte Carlo uncertainty pipeline.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="glass-card">
+            <h2 style="margin-top: 0;">System Architecture</h2>
+            <p>The simulation is built on a modular Python architecture comprising:</p>
+            <ul>
+                <li><strong><code>io</code></strong>: Geospatial data loading & validation</li>
+                <li><strong><code>model</code></strong>: Configuration and work schedules</li>
+                <li><strong><code>engine</code></strong>: The fast execution core assigning flows</li>
+                <li><strong><code>mc</code></strong>: Monte Carlo parallel runner</li>
+                <li><strong><code>viz</code></strong>: Data visualization mapping</li>
+            </ul>
+        </div>
+
+        <div class="glass-card">
+            <h2 style="margin-top: 0;">Simulation Mechanics</h2>
+
+            <h3>1. Distance Decay & Multinomial Assignment</h3>
+            <p>Workers are assigned to destinations using a distance-decay gravity model. Each residential agent
+                evaluates prospective workplaces using the following probability model:</p>
+
+            <div
+                style="background: rgba(0,0,0,0.3); padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; border: 1px solid rgba(255,255,255,0.05); text-align: center;">
+                $$ P(work_j | res_i) \propto \exp\left(-\frac{\text{Distance}(i, j)}{\text{Decay\_Constant}}\right) $$
+            </div>
+
+            <p>These probabilities form a discrete probability mass function from which destinations are drawn via
+                multinomial sampling.</p>
+
+            <h3>2. Temporal Schedules</h3>
+            <p>Work start and end times are sampled from truncated normal distributions specifically tailored to
+                standard building types (e.g., IT vs. Non-IT Commercial vs. Recreation).</p>
+
+            <h3>3. Monte Carlo Executions</h3>
+            <p>Uncertainty is intrinsic to gravity models and schedule variations. By running <span
+                    style="font-family: 'Fira Code', monospace; color: #a5b4fc;">N</span> Monte Carlo iterations
+                concurrently, we compute the structural uncertainty embedded within our spatial assignment logic to
+                construct robust confidence intervals.</p>
+        </div>
+
+        <div style="margin-top: 3rem; text-align: center;">
+            <a href="./index.html" class="btn btn-outline">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    style="margin-right: 8px; transform: rotate(180deg);">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+                Back to Home
+            </a>
+        </div>
+    </main>
+
+    <footer
+        style="text-align: center; padding: 4rem 2rem; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 4rem;">
+        <p style="color: var(--text-secondary);">&copy; 2024 Diurnal Simulation Project. Open source under MIT.</p>
+    </footer>
+
+</body>
+
+</html>
