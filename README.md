@@ -45,7 +45,17 @@ jupyter notebook notebooks/DiurnalPopulation_MC_UI.ipynb
 
 From here, you can load shapefiles, tune global population configurations, run simulations, and directly export maps to HTML.
 
-### 3. Running Headless (CLI)
+### 3. Simulation Demo
+
+<div align="center">
+  <video width="80%" controls style="border-radius: 8px; margin-top: 15px;">
+    <source src="docs/assets/img/demo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <p><em>Example simulation showcasing dynamic population shifts over 24 hours.</em></p>
+</div>
+
+### 4. Running Headless (CLI)
 
 You can also run a pre-configured Monte Carlo simulation directly from the terminal without the UI:
 
