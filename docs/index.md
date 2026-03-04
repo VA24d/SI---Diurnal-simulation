@@ -14,6 +14,15 @@ title: Home
   <p>Urban systems analysis often requires dynamic <strong>time-of-day population</strong> insights rather than static residential counts. By leveraging Monte Carlo simulations, we explicitly model and quantify uncertainties in <strong>Work Start/End Times</strong> and <strong>Workplace Assignments</strong>.</p>
 
   <div class="glass-card">
+    <h3>Project Presentation</h3>
+    <video width="100%" controls style="border-radius: 12px; margin-top: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
+      <source src="assets/img/presentation.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p style="text-align: center; margin-top: 15px; margin-bottom: 0;"><em>A comprehensive presentation on the methodology and findings of the Diurnal Population Simulation.</em></p>
+  </div>
+
+  <div class="glass-card">
     <h3>Live Simulation Demo</h3>
     <video width="100%" controls style="border-radius: 12px; margin-top: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
       <source src="assets/img/demo.mp4" type="video/mp4">

@@ -55,7 +55,17 @@ From here, you can load shapefiles, tune global population configurations, run s
   <p><em>Example simulation showcasing dynamic population shifts over 24 hours.</em></p>
 </div>
 
-### 4. Running Headless (CLI)
+### 4. Project Presentation
+
+<div align="center">
+  <video width="80%" controls style="border-radius: 8px; margin-top: 15px;">
+    <source src="docs/assets/img/presentation.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <p><em>Comprehensive presentation on the methodology and findings of the Diurnal Population Simulation.</em></p>
+</div>
+
+### 5. Running Headless (CLI)
 
 You can also run a pre-configured Monte Carlo simulation directly from the terminal without the UI:
 
