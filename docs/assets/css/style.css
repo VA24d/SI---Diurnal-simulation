@@ -1,0 +1,64 @@
+/* Modern Glassmorphism & Aesthetics */
+
+:root {
+  --primary-glow: rgba(0, 112, 243, 0.4);
+  --bg-color: #0b0f19;
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --glass-bg: rgba(17, 25, 40, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.125);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+}
+
+/* Glass Card styling */
+.glass-card {
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px var(--primary-glow);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #0070f3, #00c6ff);
+  color: #fff !important;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 118, 255, 0.23);
+}
+
+a {
+  color: #38bdf8;
+  transition: color 0.15s ease-in-out;
+}
+
+a:hover {
+  color: #7dd3fc;
+}

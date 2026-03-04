@@ -1,0 +1,4 @@
+theme: jekyll-theme-cayman
+title: Gachibowli Diurnal Population Simulation
+description: Agent-based modeling of diurnal population distribution across buildings using Monte Carlo simulations.
+show_downloads: true
